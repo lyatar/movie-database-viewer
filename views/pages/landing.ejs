@@ -1,0 +1,56 @@
+<% include ../partials/header %>
+
+<div class="contents">
+
+<h1 syle="margin: 0px auto"> Results Page!</h1>
+
+
+
+<div class="row text-center" style="display: flex; flex-wrap: wrap">
+
+<% data["Search"].forEach(function(movie) {  %>
+
+        <div class="card" style="width: 20rem;" data-toggle="modal" data-target="#exampleModalLong">
+            <a href="#">
+              <img class="card-img-top" src="<%= movie["Poster"] %>" alt="Card image cap">
+              <div class="card-body">
+                <h4 class="card-title"><strong><%= movie["Title"] %></strong></h4>
+                <p class="card-text"><%= movie["Year"] %>, <%= movie["Type"].toUpperCase() %><br>Bacon ipsum dolor amet pork sausage turducken.</p>
+              </div>
+          </a>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"><h3><%= movie["Title"] %></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <img src="<%= movie["Poster"] %>" />
+                  <p style="padding: 25px">
+                  Bacon ipsum dolor amet pork sausage turducken, pork loin ribeye venison meatloaf meatball prosciutto ham spare ribs rump biltong pastrami. Sirloin bacon beef ribs shankle porchetta. Beef ribs shank ground round rump. Landjaeger venison short ribs, cow pig alcatra shoulder brisket shank pork loin. Drumstick chuck shankle t-bone meatball swine. Pork boudin pastrami, meatball shoulder filet mignon pork chop ground round corned beef picanha. Jerky pork belly corned beef burgdoggen ball tip.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+<% }) %>
+</div>
+
+
+
+
+
+</div>
+<% include ../partials/footer %>
