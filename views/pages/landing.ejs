@@ -2,22 +2,22 @@
 
 <div class="contents">
 
-<h1 syle="margin: 0px auto"> Results Page!</h1>
+<h1 syle="margin: 0px auto" class="text-center"> Results Page!</h1>
 
 
 
-<div class="row text-center" style="display: flex; flex-wrap: wrap">
+<div class="row text-center" style="display: flex; flex-wrap: nowrap">
 
 <% data["Search"].forEach(function(movie) {  %>
 
-        <div class="card" style="width: 20rem;" data-toggle="modal" data-target="#exampleModalLong">
+        <div class="card" style="width: 25rem;" data-toggle="modal" data-target="#exampleModalLong">
             <a href="#">
-              <img class="card-img-top" src="<%= movie["Poster"] %>" alt="Card image cap">
-              <div class="card-body">
-                <h4 class="card-title"><strong><%= movie["Title"] %></strong></h4>
-                <p class="card-text"><%= movie["Year"] %>, <%= movie["Type"].toUpperCase() %><br>Bacon ipsum dolor amet pork sausage turducken.</p>
-              </div>
-          </a>
+                  <img class="card-img-top" src="<%= movie["Poster"] %>" alt="Card image cap">
+                  <div class="card-body">
+                        <h4 class="card-title"><strong><%= movie["Title"] %></strong></h4>
+                        <p class="card-text"><%= movie["Year"] %>, <%= movie["Type"].toUpperCase() %><br>Bacon ipsum dolor amet pork sausage turducken.</p>
+                  </div>
+              </a>
         </div>
 
         <!-- Modal -->
@@ -30,7 +30,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div class="    white-space: normal;">
                   <img src="<%= movie["Poster"] %>" />
                   <p style="padding: 25px">
                   Bacon ipsum dolor amet pork sausage turducken, pork loin ribeye venison meatloaf meatball prosciutto ham spare ribs rump biltong pastrami. Sirloin bacon beef ribs shankle porchetta. Beef ribs shank ground round rump. Landjaeger venison short ribs, cow pig alcatra shoulder brisket shank pork loin. Drumstick chuck shankle t-bone meatball swine. Pork boudin pastrami, meatball shoulder filet mignon pork chop ground round corned beef picanha. Jerky pork belly corned beef burgdoggen ball tip.</p>
@@ -47,10 +47,9 @@
 
 <% }) %>
 </div>
-
-
-
-
-
+<br><br>
+<div class="row" style="text-align: center">
+    <a href="/"><button type="button" class="btn btn-default">Back</button></a>
+</div>
 </div>
 <% include ../partials/footer %>

@@ -21,7 +21,6 @@ app.get("/results", function(req, res) {
 });
 
 
-
 // App listening on http://127.0.0.1:8000/
 app.listen(8000, function() {
     console.log('Example app listening on port 8000!');

@@ -16,6 +16,12 @@ a:hover {
     padding: 10px;
 }
 
+.row {
+    overflow-x:auto;
+	overflow-y:hidden;
+    white-space: nowrap;
+}
+
 .card {
     border: 1px solid #e6e6e6;
     text-align: left;
@@ -23,25 +29,35 @@ a:hover {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 5px;
+    white-space: normal;
+
 }
 
 .card img {
     max-height: 100%;
-    max-width: 100%;
+    max-width: 200px;
     border-radius: 5px 5px 0 0;
 
 }
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    opacity: 0.25;
+    opacity: 0.5;
 }
 
 .card-body {
     padding: 2px 16px;
 }
 
-.search-content {
-    /*margin: 0px auto;*/
+.modal-body {
+    white-space: normal;
+}
 
+p {
+    white-space: normal;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float: none;
 }
