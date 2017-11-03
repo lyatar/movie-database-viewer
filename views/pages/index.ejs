@@ -1,0 +1,61 @@
+<% include ../partials/header %>
+
+<div class="column">
+    <div style="padding: 35px">
+    <h1 style="font-size: 50px"><strong>Search For a Movie</strong></h1><br>
+        <p style="top-margin: 10px; margin-left: 25px">Bacon ipsum dolor amet pastrami cow ground round burgdoggen pork belly kevin. Hamburger pastrami beef, bacon pork loin venison pork belly bresaola pork chop. Rump brisket pork belly chicken leberkas tongue. Picanha andouille ham hock, kevin bacon short loin tenderloin beef shoulder frankfurter chuck shankle jowl rump kielbasa. Boudin frankfurter chuck, shankle salami rump fatback pork chop tenderloin corned beef drumstick.
+        <br><br>Bacon ipsum dolor amet pastrami cow ground round burgdoggen pork belly kevin. Hamburger pastrami beef, bacon pork loin venison pork belly bresaola pork chop. Rump brisket pork belly chicken leberkas tongue. </p>
+    </div>
+</div>
+
+
+<div class="search-contents text-center column">
+
+    <div class="row col-centered " style="display: flex; flex-wrap: nowrap; width: 70%">
+<% for(var i=0; i<10; i++) {  %>
+
+            <div class="card" style="width: 25rem;">
+                <a href="#">
+                      <img class="card-img-top" src="/images/test.jpg" alt="Card image cap">
+                      <div class="card-body">
+                            <h4 class="card-title"><strong>A Very Popular Movie</strong></h4>
+                            <p class="card-text">2017, MOVIE <br>Bacon ipsum dolor amet pork sausage turducken.</p>
+                      </div>
+                  </a>
+            </div>
+
+<% } %>
+    </div> <br><br>
+
+
+<form action="/results" method="GET" >
+<div class="col-xs-6 col-centered">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Movie name?" name="search">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">Go!</button>
+    </span>
+  </div>
+</div>
+</form>
+
+<script>
+$(document).ready(function(){
+    // card movements
+    $( ".card" ).hover(function() {
+        $(this).toggleClass("translate");
+        console.log("Card was clicked");
+        });
+
+});
+
+
+</script>
+
+</div>
+
+
+
+
+
+<% include ../partials/footer %>

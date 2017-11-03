@@ -1,3 +1,15 @@
+html, body {
+    background: linear-gradient(180deg, #e6e6e6, white);
+    background-attachment: fixed;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+p {
+    font-family: 'Lora', serif;
+}
+
 .test {
     background-color: red;
     color: red;
@@ -12,14 +24,18 @@ a:hover {
     color: grey;
 }
 
+
+
 .contents {
-    padding: 10px;
+    padding: 25px;
 }
 
 .row {
     overflow-x:auto;
 	overflow-y:hidden;
     white-space: nowrap;
+    padding: 25px 10px;
+
 }
 
 .card {
@@ -42,7 +58,6 @@ a:hover {
 
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    opacity: 0.5;
 }
 
 .card-body {
@@ -60,4 +75,29 @@ p {
 .col-centered{
     margin: 0 auto;
     float: none;
+}
+
+.font-large {
+    background: -webkit-linear-gradient(#eee, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 1;
+    margin: auto;
+}
+
+.translate {
+    transform: translate(0,-10px);
+    -webkit-transform:translate(0,-10px)
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+
+@media (max-width:640px) and (orientation: portrait){
+    .column {
+        width: 100%;
+    }
 }
