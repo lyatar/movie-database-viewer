@@ -15,7 +15,9 @@
                   <img class="card-img-top" src="<%= movie["Poster"] %>" alt="Card image cap">
                   <div class="card-body">
                         <h4 class="card-title"><strong><%= movie["Title"] %></strong></h4>
-                        <p class="card-text"><%= movie["Year"] %>, <%= movie["Type"].toUpperCase() %><br>Bacon ipsum dolor amet pork sausage turducken.</p>
+                        <p class="card-text"><%= movie["Year"] %>, <%= movie["Type"].toUpperCase() %>
+            
+                        </p>
                   </div>
               </a>
         </div>
@@ -58,4 +60,6 @@
     <a href="/"><button type="button" class="btn btn-default">Back</button></a>
 </div>
 </div>
+
+<% include ../partials/interactions %>
 <% include ../partials/footer %>
