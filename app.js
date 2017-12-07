@@ -4,6 +4,8 @@ var request = require("request");
 
 var port = process.env.PORT || 8080;
 
+var search="apple";
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
@@ -22,12 +24,14 @@ app.get("/results", function(req, res) {
     });
 });
 
+
+
 app.get('/jquery/jquery.js', function(req, res) {
     res.sendfile(__dirname + '/node_modules/jquery/dist/jquery.min.js');
 });
 
 
-// App listening on http://127.0.0.1:8002/
+
 app.listen(port, function() {
     console.log('Example app listening on http://localhost:' + port);
 });
