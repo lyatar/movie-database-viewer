@@ -26,6 +26,6 @@ app.get('/jquery/jquery.js', function(req, res) {
 
 
 // App listening on http://127.0.0.1:8002/
-app.listen(8002, function() {
-    console.log('Example app listening on http://127.0.0.1:8002/');
+app.listen(port, function() {
+    console.log('Example app listening on http://localhost:' + port);
 });
